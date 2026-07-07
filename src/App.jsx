@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate, Link, useLocation } from 'react-router-dom'
 import UploadForm from './components/UploadForm.jsx'
 import Gallery from './components/Gallery.jsx'
+import Admin from './components/Admin.jsx'
 
 function NavBar() {
   const location = useLocation()
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/" element={<Navigate to="/upload" replace />} />
           <Route path="/upload" element={<UploadForm />} />
           <Route path="/galerie" element={<Gallery />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
     </div>
