@@ -79,7 +79,6 @@ export default function UploadForm() {
           id="photo"
           type="file"
           accept="image/*"
-          capture="environment"
           onChange={(e) => setFile(e.target.files?.[0] ?? null)}
           className="w-full"
         />
@@ -90,7 +89,7 @@ export default function UploadForm() {
       <button
         type="submit"
         disabled={status === 'uploading'}
-        className="w-full py-3 rounded-lg bg-indigo-600 text-white font-medium disabled:opacity-50"
+        className="w-full py-3 rounded-lg bg-purple-500 text-white font-medium disabled:opacity-50 hover:bg-purple-600"
       >
         {status === 'uploading' ? 'Envoi en cours…' : 'Upload / Envoyer'}
       </button>

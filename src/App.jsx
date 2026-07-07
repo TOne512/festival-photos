@@ -8,12 +8,12 @@ function NavBar() {
   const linkClass = (path) =>
     `flex-1 text-center py-3 font-medium ${
       location.pathname.startsWith(path)
-        ? 'text-indigo-600 border-b-2 border-indigo-600'
+        ? 'text-purple-600 border-b-2 border-purple-600'
         : 'text-gray-500'
     }`
 
   return (
-    <nav className="flex sticky top-0 bg-white shadow z-10">
+    <nav className="flex sticky top-0 bg-white/80 backdrop-blur shadow z-10">
       <Link to="/upload" className={linkClass('/upload')}>
         Déposer
       </Link>
@@ -26,7 +26,7 @@ function NavBar() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100">
       <NavBar />
       <main className="max-w-xl mx-auto px-4 py-6">
         <Routes>
