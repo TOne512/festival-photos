@@ -43,12 +43,14 @@ export default function Gallery() {
       <div className="grid grid-cols-2 gap-3">
         {photos.map((photo) => (
           <figure key={photo.id} className="rounded-lg overflow-hidden bg-white shadow-sm">
-            <img
-              src={optimizedUrl(photo.cloudinary_url)}
-              alt={photo.groupe ? `Photo de ${photo.groupe}` : 'Photo du festival'}
-              className="w-full h-40 object-cover"
-              loading="lazy"
-            />
+            <a href={photo.cloudinary_url} target="_blank" rel="noopener noreferrer">
+              <img
+                src={optimizedUrl(photo.cloudinary_url)}
+                alt={photo.groupe ? `Photo de ${photo.groupe}` : 'Photo du festival'}
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+            </a>
             <figcaption className="px-2 py-1.5 text-xs text-gray-500">
               {photo.groupe || 'Anonyme'}
             </figcaption>
