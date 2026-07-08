@@ -14,13 +14,18 @@ function NavBar() {
     }`
 
   return (
-    <nav className="flex sticky top-0 bg-white/80 backdrop-blur shadow z-10">
-      <Link to="/upload" className={linkClass('/upload')}>
-        Déposer
-      </Link>
-      <Link to="/galerie" className={linkClass('/galerie')}>
-        Galerie
-      </Link>
+    <nav className="sticky top-0 bg-white/80 backdrop-blur shadow z-10">
+      <div className="flex justify-center py-3">
+        <img src="/logo.png" alt="Festival Fanfares Sans Frontières" className="h-40 w-40" />
+      </div>
+      <div className="flex">
+        <Link to="/upload" className={linkClass('/upload')}>
+          Déposer
+        </Link>
+        <Link to="/galerie" className={linkClass('/galerie')}>
+          Galerie
+        </Link>
+      </div>
     </nav>
   )
 }
